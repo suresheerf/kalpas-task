@@ -25,7 +25,6 @@ export const protect = (req,res,next)=>{
         return
     }
     const decode = jwt.verify(token,process.env.JWT_SECRET);
-    console.log(decode.a);
     if(decode.a === 'allow')
     {
         return next();
